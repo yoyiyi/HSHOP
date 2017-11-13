@@ -12,7 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
 
 /**
  * Servlet Filter implementation class EncodingFilter
@@ -46,9 +45,6 @@ public class EncodingFilter implements Filter {
 							if ("getParameter".equals(arg1.getName())) {
 								String value = req.getParameter(arg2[0].toString());
 								return new String(value.getBytes("iso-8859-1"), "utf-8");
-								
-								
-								
 							}
 							return arg1.invoke(req, arg2);
 						}

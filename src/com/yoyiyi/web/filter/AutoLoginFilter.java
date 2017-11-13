@@ -51,7 +51,7 @@ public class AutoLoginFilter implements Filter {
 		if (cookie_name != null && cookie_password != null) {
 			// 执行自动登录（登录逻辑）
 		}
-		chain.doFilter(req, resp);
+		chain.doFilter(req, resp);//放行
 	}
 
 	/**
