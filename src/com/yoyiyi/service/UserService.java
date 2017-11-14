@@ -31,13 +31,14 @@ public class UserService {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public boolean checkUsername(String username) {
 		UserDao dao = new UserDao();
 		try {
-			Long isExit = dao.checkUsername(username);
+			return dao.checkUsername(username);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 }

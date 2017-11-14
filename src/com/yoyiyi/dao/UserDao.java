@@ -25,9 +25,10 @@ public class UserDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public Long checkUsername(String username) throws SQLException {
-		return (Long) getQueryRunner().query("select count(*) from user where username=?", new ScalarHandler<Long>(),
-				username);
+	public boolean checkUsername(String username) throws SQLException {
+		Long count = (Long) getQueryRunner().query("select count(*) from user where username=?",
+				new ScalarHandler<Long>(), username);
+		return count > 0 ? true : false;
 
 	}
 
