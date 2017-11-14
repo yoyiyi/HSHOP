@@ -13,15 +13,15 @@ body {
 	margin-top: 20px;
 	margin: 0 auto;
 }
-
 </style>
 
 </head>
 <body>
-
-
-
-
-
+	<jsp:include page="/header.jsp"></jsp:include>
+	<div class="container-fluid" style="background: url('image/regist_bg.jpg');">
+	
+	
+	
+	</div>
 </body>
 </html>
