@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import com.yoyiyi.dao.UserDao;
 import com.yoyiyi.domain.User;
 
-public class RegisterService {
+public class UserService {
 	/**
 	 * 判断用户是否注册成功
 	 * 
@@ -21,5 +21,23 @@ public class RegisterService {
 			e.printStackTrace();
 		}
 		return row > 0 ? true : false;
+	}
+
+	public void active(String activeCode) {
+		UserDao dao = new UserDao();
+		try {
+			dao.active(activeCode);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean checkUsername(String username) {
+		UserDao dao = new UserDao();
+		try {
+			Long isExit = dao.checkUsername(username);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
