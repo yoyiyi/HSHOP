@@ -1,13 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!-- 登录 注册 购物车... -->
 <div class="container-fluid">
 	<div class="col-md-4">
-		<img alt="logo" src="img/logo2.png">
+		<img src="img/logo2.png" />
 	</div>
 	<div class="col-md-5">
-		<img alt="logo" src="image/header.jpg">
+		<img src="img/header.png" />
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-3" style="padding-top:20px">
 		<ol class="list-inline">
 			<li><a href="login.jsp">登录</a></li>
 			<li><a href="register.jsp">注册</a></li>
@@ -39,7 +41,6 @@
 					<li><a href="#">电脑办公</a></li>
 					<li><a href="#">电脑办公</a></li>
 				</ul>
-				
 				<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="Search">
